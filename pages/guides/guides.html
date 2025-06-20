@@ -2,6 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
+    <!-- LINHA CRUCIAL ADICIONADA: Resolve o problema do zoom e do layout -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guides</title>
     <link rel="icon" href="hattered_logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="guide.css" />
@@ -39,19 +41,19 @@
             <div class="left-column">
                 <h3>Últimos Posts</h3>
                 <div class="latest-posts">
-                    </div>
+                </div>
             </div>
             <div class="main-column">
                 <h3>Posts em Destaque</h3>
                 <div class="main-news">
-                    </div>
+                </div>
             </div>
         </div>
 
         <div class="more-posts-section">
             <h3>Mais Posts</h3>
             <div class="more-posts-grid">
-                </div>
+            </div>
         </div>
         </div>
 
@@ -65,9 +67,23 @@
             <button class="close-sidebar" aria-label="Close Categories Menu">&times;</button>
         </div>
         <div class="sidebar-content">
-            </div>
+        </div>
+    </div>
+
+    <!-- AVISO DE ORIENTAÇÃO PARA TABLET -->
+    <div id="orientation-warning">
+        <div class="warning-content">
+            <p>Para a melhor experiência, recomendamos que utilize este site com o dispositivo na horizontal.</p>
+            <button id="dismiss-warning-btn">Eu entendo</button>
+        </div>
     </div>
 
     <script src="guides.js"></script>
+    <script>
+        // JavaScript para dispensar o aviso de orientação
+        document.getElementById('dismiss-warning-btn').addEventListener('click', function() {
+            document.getElementById('orientation-warning').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
