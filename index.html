@@ -2,20 +2,17 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="hattered_welcome1.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./hattered_welcome1.svg" type="image/svg+xml">
   <title>Hattered - Página de Boas-Vindas</title>
-  <link rel="stylesheet" href="index/welcome.css" />
+  <link rel="stylesheet" href="./index/welcome.css" />
 </head>
-<style>
-
-</style>
 <body>
 
   <div class="container">
 
-    <img src="pages/assets/index.html/blur_index1.png" alt="Blur Top Left" class="blur-image blur-top-left" />
-    <img src="pages/assets/index.html/blur_index1.png" alt="Blur Right Center" class="blur-image blur-right-center" />
+    <img src="./pages/assets/index.html/blur_index1.png" alt="Blur Top Left" class="blur-image blur-top-left" />
+    <img src="./pages/assets/index.html/blur_index1.png" alt="Blur Right Center" class="blur-image blur-right-center" />
 
     <div class="top-content">
       <div class="social-icons">
@@ -29,24 +26,22 @@
       <div class="left-block">
         <div class="badge">made by frraz</div>
         <div class="page-title">Hattered</div>
-        <!-- Descrição para Desktop e Tablet -->
         <div class="description desktop-description">
           O seu lugar para encontrar mídia e ferramentas criativas. Explore, compartilhe e adicione à crescente biblioteca Hattered de conteúdo online.
         </div>
-        <!-- Descrição apenas para Telemóvel -->
         <div class="description mobile-description">
           Bem-vindo, explorador
         </div>
         <nav class="main-nav">
-          <a href="pages/home.html" class="btn-red">Home</a>
-          <a href="pages/guides/guides.html">Guias</a>
-          <a href="pages/glossary.html">Glossário</a>
-          <a href="pages/blacklist.html">Blacklist Checker</a>
+          <a href="./pages/home.html" class="btn-red">Home</a>
+          <a href="./pages/guides/guides.html">Guias</a>
+          <a href="./pages/glossary.html">Glossário</a>
+          <a href="./pages/blacklist.html">Blacklist Checker</a>
         </nav>
       </div>
 
       <div class="right-block">
-        <img src="index/hattered_welcome.png" alt="Logo" />
+        <img src="./index/hattered_welcome.png" alt="Logo" />
       </div>
     </div>
 
@@ -90,7 +85,7 @@
     
     <section class="screenshot-section">
       <div class="screenshot-wrapper">
-        </div>
+      </div>
       <div class="screenshot-controls">
         <button class="prev-btn" onclick="prevScreenshot()">Anterior</button>
         <button class="next-btn" onclick="nextScreenshot()">Próxima</button>
@@ -98,12 +93,12 @@
 
       <script>
         const screenshots = [
-          "index/screenshot1.png",
-          "index/screenshot2.png",
-          "index/screenshot3.png",
-          "index/screenshot4.png",
-          "index/screenshot5.png",
-          "index/screenshot6.png"
+          "./index/screenshot1.png",
+          "./index/screenshot2.png",
+          "./index/screenshot3.png",
+          "./index/screenshot4.png",
+          "./index/screenshot5.png",
+          "./index/screenshot6.png"
         ];
         let currentScreenshot = 0;
         const wrapper = document.querySelector('.screenshot-wrapper');
@@ -120,7 +115,7 @@
           const oldImg = wrapper.querySelector('img.active');
           const newImg = createImg(screenshots[index]);
           wrapper.appendChild(newImg);
-          newImg.offsetHeight; // forçar reflow
+          newImg.offsetHeight;
           newImg.classList.add('active');
           newImg.style.opacity = '1';
           if (oldImg) {
@@ -140,7 +135,6 @@
           showScreenshot((currentScreenshot - 1 + screenshots.length) % screenshots.length);
         }
 
-        // Inicialização
         showScreenshot(0);
       </script>
     </section>
@@ -150,7 +144,6 @@
     </div>
   </div>
 
-  <!-- AVISO DE ORIENTAÇÃO PARA TABLET -->
   <div id="orientation-warning">
     <div class="warning-content">
       <p>Para a melhor experiência, recomendamos que utilize este site com o dispositivo na horizontal.</p>
@@ -159,7 +152,6 @@
   </div>
 
   <script>
-    // JavaScript para dispensar o aviso de orientação
     document.getElementById('dismiss-warning-btn').addEventListener('click', function() {
       document.getElementById('orientation-warning').style.display = 'none';
     });
